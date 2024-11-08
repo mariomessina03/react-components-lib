@@ -1,0 +1,447 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz@0,14..32;1,14..32&display=swap");
+
+/* CSS Reset */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img,
+picture,
+svg,
+video,
+canvas {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  font-style: italic;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+    transition: none;
+  }
+}
+
+body,
+html {
+  height: 100%;
+  scroll-behavior: smooth;
+
+  font-family: Inter, sans-serif;
+  margin: 2rem;
+}
+
+/* Badge Component Styling */
+
+.badge {
+  display: inline-block;
+  padding: 2px 12px;
+  margin: 0.5rem;
+}
+
+.square {
+  border-radius: 4px;
+}
+
+.pill {
+  border-radius: 12px;
+}
+
+.gray {
+  background: #f3f4f6;
+  color: #1f2937;
+}
+
+.red {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.yellow {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.green {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.blue {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.indigo {
+  background: #e0e7ff;
+  color: #3730a3;
+}
+
+.purple {
+  background: #ede9fe;
+  color: #5b21b6;
+}
+
+.pink {
+  background: #fce7f3;
+  color: #9d174d;
+}
+
+/* Banner Component Styling */
+
+.banner-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.banner {
+  max-width: 900px;
+  padding: 16px;
+  border-radius: 6px;
+  margin: 1rem;
+
+  font-size: 14px;
+  line-height: 1.25rem;
+
+  display: flex;
+  gap: 0.8rem;
+}
+
+.banner img {
+  height: 20px;
+}
+
+.success {
+  background-color: #ecfdf5;
+  color: #065f46;
+  font-weight: 500;
+}
+
+.success p {
+  color: #047857;
+  font-weight: 400;
+}
+
+.warning {
+  background: #fffbeb;
+  color: #92400e;
+  font-weight: 500;
+}
+
+.warning p {
+  color: #b45309;
+  font-weight: 400;
+}
+
+.error {
+  background: #fef2f2;
+  color: #92400e;
+  font-weight: 500;
+}
+
+.error p {
+  color: #b45309;
+  font-weight: 400;
+}
+
+.neutral {
+  background: #eff6ff;
+  color: #1e40af;
+  font-weight: 500;
+}
+
+.neutral p {
+  color: #1c51b9;
+  font-weight: 400;
+}
+
+/* Card Component Styling */
+
+.card-container {
+  background-color: #f9fafb;
+  width: 400px;
+  height: 200px;
+  margin: auto;
+  margin-top: 2rem;
+}
+
+.card {
+  position: relative;
+  top: -20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 360px;
+  margin: auto;
+
+  gap: 1.25rem;
+}
+.card img {
+  width: 48px;
+  aspect-ratio: 1;
+}
+
+.card h3 {
+  font-size: 18px;
+  font-weight: 500;
+  color: #111827;
+  text-align: center;
+}
+
+.card p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #6b7280;
+  text-align: center;
+}
+
+.card-container:hover {
+  box-shadow: 0px 4px 25px 0px #0000001a;
+}
+
+/* Testimonial Component Styling */
+
+/* Testimonial with image */
+
+.testimonial-container {
+  margin-top: 4rem;
+  width: 1358px;
+  height: 400px;
+  padding: 0 32px;
+
+  display: flex;
+}
+
+.testimonial-img-cont {
+  aspect-ratio: 1;
+  align-items: center;
+  position: relative;
+  height: 465px;
+  width: 424px;
+  top: -32px;
+
+  margin-right: 30px;
+}
+
+.testimonial-desc {
+  width: 800px;
+  margin: 80px 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  gap: 2rem;
+}
+
+.testimonial-desc h3 {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 32px;
+  text-align: left;
+}
+.virgoletta {
+  width: 43px;
+  height: 35px;
+}
+
+.name {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: left;
+}
+
+.role {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+}
+
+/*  Testimonial with image (mobile) */
+
+@media screen and (max-width: 767px) {
+  .testimonial-container {
+    margin-top: 4rem;
+    width: 376px;
+    height: 654px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .testimonial-img-cont {
+    position: static;
+    width: 376px;
+    height: 200px;
+    margin-right: 0;
+
+    display: flex;
+    justify-content: center;
+  }
+
+  .testimonial-img-cont img {
+    width: 312px;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .testimonial-desc {
+    width: 345px;
+    margin: 0;
+  }
+
+  /* qualocsa */
+}
+
+/* Testimonial without image */
+
+.testimonial-container-ni {
+  margin-top: 4rem;
+  width: 1358px;
+  height: 444px;
+}
+
+.testimonial-desc-ni {
+  width: 1280px;
+  height: 236px;
+  padding: 0px 32px;
+  margin: auto;
+
+  position: relative;
+  top: 96px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.logo {
+  width: 220px;
+  height: 32px;
+  display: flex;
+  margin: auto;
+
+  justify-content: center;
+}
+
+.logo h1 {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 36px;
+}
+
+.testimonial-desc-ni h3 {
+  width: 768px;
+  height: 108px;
+  margin: auto;
+
+  font-family: Inter;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 36px;
+  text-align: center;
+}
+
+.footer-ni {
+  display: flex;
+  justify-content: center;
+}
+
+.name-ni {
+  line-height: 24px;
+}
+
+.role-ni {
+  line-height: 24px;
+  color: #6b7280;
+}
+
+@media screen and (max-width: 767px) {
+  .testimonial-container-ni {
+    max-width: 376px;
+    min-height: 552px;
+  }
+
+  .testimonial-desc-ni {
+    width: 376px;
+    height: 404px;
+    padding: 0px 16px;
+  }
+
+  .logo {
+    width: 200px;
+    height: 32px;
+    display: flex;
+    margin: auto;
+
+    justify-content: center;
+  }
+
+  .logo h1 {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 36px;
+  }
+
+  .testimonial-desc-ni h3 {
+    max-width: 344px;
+    min-height: 252px;
+  }
+
+  .footer-ni {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .name-ni {
+    line-height: 24px;
+  }
+
+  .role-ni {
+    line-height: 24px;
+    color: #6b7280;
+  }
+}
